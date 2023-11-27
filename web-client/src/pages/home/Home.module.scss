@@ -1,0 +1,32 @@
+.home{
+    max-width: 1350px; 
+    margin: 0 auto;
+    padding: 0px 15px 15px 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    .homeContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        overflow-y: scroll;
+        height: calc(100vh - 90.8px);
+    }
+    .left{
+        width: 24rem;
+    }
+    .center {
+        width: 36rem;
+    }
+    .right{
+        width: 24rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .home{
+        .homeContainer{
+            height: calc(100vh - 144.8px);
+        }
+    }
+}
+

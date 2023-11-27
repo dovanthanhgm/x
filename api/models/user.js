@@ -1,0 +1,76 @@
+const mongoose = require("mongoose");
+
+const UserSchema = new mongoose.Schema({
+    userName:{
+        type:String,
+        require:true,
+        min:3,
+        max:10,
+        unique:true
+    },
+    fullName:{
+        type:String,
+        require:true,
+        min:3,
+        max:10,
+    },
+    email:{
+        type:String,
+        require:true,
+        max:20,
+        unique:true,
+    },
+    verified:{
+        type:Boolean,
+        default:false
+    },
+    password:{
+        type:String,
+        require:true,
+        min:6,
+    },
+    refreshToken:{
+        type:String,
+        default:""
+    },
+    profilePicture:{
+        public_id:{
+            type:String,
+        },
+        url:{
+            type:String,
+        },
+    },
+    posts:{
+        type:Array,
+        default:[]
+    },
+    followers:{
+        type:Array,
+        default:[]
+    },
+    following:{
+        type:Array,
+        default:[]
+    },
+    isAdmin:{
+        type:Boolean,
+        default:false
+    },
+    location:{
+        type:String,
+        max:20
+    },
+    occupation:{
+        type:String,
+        max:20
+    },
+    socialLink1:{
+        type:String,
+    },
+    socialLink2:{
+        type:String,
+    }
+},{timestamps:true});
+
+module.exports=mongoose.model("User",UserSchema);

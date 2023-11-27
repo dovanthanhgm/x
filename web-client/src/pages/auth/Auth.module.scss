@@ -1,0 +1,272 @@
+.authBackground{
+    background-color: #030714;
+    width: 100%;
+    height: 100svh;
+    overflow-y: scroll;
+    .logo{
+        height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        h1 {
+            font-size: 120px;
+            font-weight: 600;
+	        background: linear-gradient(to right, #36aee6ed 0%, rgb(131, 66, 212) 100%);
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+        }
+        .scrollIcon{
+            position: absolute;
+            bottom: 100px;
+            height: 70px;
+            width: 40px;
+            border-radius: 50px;
+            border: white 2px solid;
+            .wheel{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 5px;
+                width: 5px;
+                background-color: white;
+                border-radius: 50px;
+                animation: wheel 1s infinite;
+            }
+            @keyframes wheel {
+                0% {
+                    top: 12px;
+                }
+                50% {
+                    top: 20px;
+                }
+                100% {
+                    top: 12px;
+                }
+            }
+            .arrowBox{
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                left: 2.6px;
+                .arrow{
+                    position: absolute;
+                    height: 30px;
+                    width: 30px;
+                    border-right: 1px solid white;
+                    border-bottom: 1px solid white;
+                    transform: rotate(45deg);
+                    animation: arrow 2s infinite ease-in-out;
+                }
+                .arrow:nth-of-type(1){
+                    top: 0px;
+                }
+                .arrow:nth-of-type(2){
+                    top: 18px;
+                    animation-delay: 200ms;
+                }
+                .arrow:nth-of-type(3){
+                    top: 36px;
+                    animation-delay: 600ms;
+                }
+                @keyframes arrow {
+                    0% {
+                       opacity: 0;
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    .authContainer{
+        height: 100svh;
+        display: flex;
+        align-items: center;
+        .conatinerBox{
+            width: 100%;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content:space-evenly;
+            padding: 20px;
+            .register_login_Container{
+                max-width: 350px;
+                width: 100%;
+                background-color: #0F0D22;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 50px;
+                border-radius: 10px;
+                padding: 30px;
+                    span{
+                        font-size: 50px;
+                        font-weight: 900;
+                        color:white;
+                    }
+                    .otpContainer{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        align-items: center;
+                        span{
+                            font-size: 14px;
+                        }
+                        .inputContainer{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            gap: 10px;
+                            input{
+                                width: 60px;
+                                height: 60px;
+                                font-size: 24px;
+                                font-weight: 500;
+                                text-align: center;
+                                border: none;
+                                outline: none;
+                                padding: 15px;
+                                border-radius: 10px;
+                                background-color: #130e2d;
+                                color: white;
+                            }
+                        }
+                        .actionButtons{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            button{
+                                padding: 10px 15px;
+                                width: 100%;
+                                border-radius: 10px;
+                                outline: none;
+                                border: none;
+                                cursor: pointer;
+                                font-size: 16px;
+                                color: white;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            button:nth-of-type(1){
+                                background-color: grey;
+                            }
+                            button:nth-of-type(2){
+                                background-color: red;
+                            }
+                        }
+                    }
+                .formContainer{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    span{
+                        font-size: 14px;
+                        color: white;
+                    }
+                    form{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 20px;
+                        .inputBox{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            input{
+                                width: 100%;
+                                border: none;
+                                outline: none;
+                                padding: 10px 15px;
+                                border-radius: 10px;
+                                background-color: #130e2d;
+                                color: white;
+            
+                            }
+                            span{
+                                font-size: 12px;
+                                color: red;
+                            }
+                        }
+                    }
+                    button{
+                        padding: 10px 20px;
+                        background: linear-gradient(to right, #36aee6ed 0%, rgb(131, 66, 212) 100%);
+                        border-radius: 30px;
+                        color: white;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 16px;
+                        width: 100%;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@media only screen and (max-width: 800px) {
+    .authBackground{
+        .logo{
+            h1{
+                font-size: 100px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    .authBackground{
+        .logo{
+            h1{
+                font-size: 80px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .authBackground{
+        .logo{
+            h1{
+                font-size: 50px;
+            }
+        }
+        .authContainer{
+            flex-direction: column;
+            justify-content:start;
+            .conatinerBox{
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 300px) {
+    .authBackground{
+        .logo{
+            h1{
+                font-size: 40px;
+            }
+        }
+    }
+}
